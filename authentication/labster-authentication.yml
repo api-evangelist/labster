@@ -1,0 +1,65 @@
+generated: '2026-07-19'
+method: searched
+source: https://help.labster.com/en/collections/3094279-lms-integration-for-lms-admin
+docs: https://help.labster.com/en/collections/681668-access-to-labster
+note: >-
+  Derived from documentation rather than an OpenAPI securitySchemes block, because
+  Labster ships no public API. Authentication here describes how users and LMS
+  platforms authenticate into the Labster product surface.
+summary:
+  types:
+  - openIdConnect
+  - oauth2
+  - password
+  api_key_in: []
+  oauth2_flows:
+  - clientCredentials
+  - jwtBearer
+  public_api: false
+schemes:
+- name: LTI 1.3 launch
+  type: openIdConnect
+  standard: 1EdTech LTI 1.3
+  description: >-
+    Primary institutional integration. The LMS registers Labster as an LTI 1.3
+    tool using a developer key / client ID, and launches students into Labster via
+    the OIDC third-party-initiated login flow. Endpoint configuration (tool JSON
+    URL, client ID) is issued per customer by a Labster Customer Success Manager
+    and is not published publicly.
+  platforms:
+  - Canvas
+  - Blackboard
+  - Blackboard Ultra
+  - Moodle
+  - D2L Brightspace
+  - Sakai
+  - Schoology
+  docs: https://help.labster.com/en/collections/3094279-lms-integration-for-lms-admin
+- name: Clever SSO
+  type: openIdConnect
+  description: >-
+    District users authenticate through their Clever Portal and are redirected
+    into the Labster Course Manager. Identity is matched on the student email
+    address linked to the Clever account. Rostering / Clever Secure Sync is not
+    documented; instructors invite students by email.
+  docs: https://help.labster.com/en/articles/11971470-accessing-labster-through-labster-s-clever-integration
+- name: Labster account login
+  type: password
+  in: https://my.labster.com/
+  description: Direct email/password sign-in to the Labster course manager.
+- name: OAuth2 client credentials (internal)
+  type: oauth2
+  flow: clientCredentials
+  description: >-
+    Service-to-service authentication between Labster's own backend services, as
+    implemented in the open-source Livit/Labster.OAuth2Client library. Not exposed
+    to third-party developers.
+  source: https://github.com/Livit/Labster.OAuth2Client
+- name: JWT Bearer grant (internal)
+  type: oauth2
+  flow: jwtBearer
+  standard: RFC 7523
+  description: >-
+    Used by Labster for communication with Salesforce, per the Labster.OAuth2Client
+    documentation. Not exposed to third-party developers.
+  source: https://github.com/Livit/Labster.OAuth2Client
