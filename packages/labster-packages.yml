@@ -1,0 +1,43 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Livit
+note: >-
+  Labster publishes no consumer-facing client SDK, because it publishes no public
+  API. The one first-party library below is an internal service-to-service OAuth2
+  client the company open-sourced from its own GitHub organisation (github.com/Livit,
+  display name "Labster"). It is NOT an SDK for a Labster API and is deliberately
+  not wired as a `type: SDKs` pointer.
+registries_probed:
+- registry: npm
+  query: labster
+  result: no first-party packages
+- registry: pypi
+  query: labster
+  result: 404 - not published
+- registry: rubygems
+  result: no first-party packages
+- registry: packagist
+  result: no first-party packages
+- registry: crates.io
+  result: no first-party packages
+- registry: nuget
+  result: no first-party packages
+- registry: maven-central
+  result: no first-party packages
+- registry: pkg.go.dev
+  result: no first-party packages
+packages:
+- language: python
+  registry: github
+  name: oauth2-client
+  version: 0.3.0
+  url: https://github.com/Livit/Labster.OAuth2Client
+  install: pip install git+https://github.com/Livit/Labster.OAuth2Client.git@0.3.0
+  license: MIT
+  official: true
+  kind: internal-library
+  description: >-
+    Django application enabling authenticated service-to-service communication
+    over OAuth2. Supports the client_credentials grant for internal services and
+    the JWT Bearer grant (RFC 7523) used for Salesforce communication.
+  not_an_sdk: true

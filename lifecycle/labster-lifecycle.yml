@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.labster.com/
+note: >-
+  Recorded negative result. Labster ships no public API, and correspondingly
+  publishes no API versioning policy, no deprecation/Sunset policy, no SLA page
+  and no public status page. status.labster.com does not resolve. The closest
+  public surface is an undated "Product Updates" help-centre collection, which is
+  a set of feature explainers rather than a dated changelog — so no `changelog/`
+  artifact and no `ChangeLog` pointer is emitted.
+versioning:
+  scheme: null
+  current: null
+  docs: null
+  note: no public API versioning policy
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: no published deprecation policy
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+status_page_probed:
+- url: https://status.labster.com/
+  status: '000'
+  note: does not resolve
+product_updates:
+  url: https://help.labster.com/en/collections/2294497-product-updates
+  dated: false
+  note: undated feature explainers, not a changelog
+deprecated_operations: []

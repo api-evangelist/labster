@@ -1,0 +1,64 @@
+generated: '2026-07-19'
+method: searched
+probe: true
+source: https://www.labster.com/security
+url: https://trustcenter.labster.com/?product=labster
+pages:
+- url: https://www.labster.com/security
+  title: Security at Labster
+  note: public security posture page, last updated September 2025
+- url: https://trustcenter.labster.com/?product=labster
+  title: Labster Trust Center
+  note: gated document room (pen-test reports, HECVAT Full, DPAs, policies)
+certifications:
+- name: SOC 2 Type 2
+  status: certified
+  achieved: '2025-05'
+- name: TX-RAMP
+  status: certified
+  level: Level 2
+  note: Texas state cloud-security certification
+- name: VPAT
+  status: published
+  note: accessibility conformance report
+- name: HECVAT
+  status: published
+  variant: Full
+  note: Higher Education Community Vendor Assessment Toolkit, available via Trust Center
+- name: GDPR
+  status: aligned
+- name: ISO/IEC 27001
+  status: in-progress
+  note: implementation underway per the security page
+- name: NIST SP 800-171
+  status: in-progress
+  note: alignment effort underway per the security page
+documents_available:
+- Penetration testing reports
+- Risk assessments (HECVAT Full)
+- Data protection and backup policies
+- Incident response plan
+- Disaster recovery plan
+- Cyber insurance documentation
+- Data Processing Agreements (DPA)
+subprocessors:
+- Amazon Web Services
+- Google
+- Salesforce
+- Intercom
+- Planhat
+contact: revops@labster.com
+evidence:
+- source: https://www.labster.com/security
+  keywords:
+  - soc 2 type 2
+  - tx-ramp
+  - iso/iec 27001
+  - nist sp 800-171
+  - gdpr
+- source: https://trustcenter.labster.com/?product=labster
+  keywords:
+  - trust center
+  - hecvat
+  - vpat
+  - subprocessors

@@ -1,0 +1,68 @@
+# Labster
+
+> Labster is a virtual laboratory simulation platform for universities and high schools, delivering 300+ immersive 3D science simulations across Biology, Chemistry, Physics and Health Sciences. Students run experiments in a browser with automated grading and unlimited practice attempts. Labster is delivered to institutions through their LMS as a 1EdTech LTI 1.3 tool, not through a public developer API.
+
+## Important note for agents
+
+Labster publishes **no public REST API, no OpenAPI description, no developer portal and no API keys**. Do not attempt to construct calls against `api.labster.com` or `developer.labster.com` — neither host resolves. Integration with Labster is an administrative LTI 1.3 tool registration performed inside the institution's LMS, using a tool configuration URL and client ID issued per customer by a Labster Customer Success Manager.
+
+## Product
+
+- [Labster](https://www.labster.com/): Virtual lab simulation platform for STEM education.
+- [Course Manager / login](https://my.labster.com/): Where instructors and students access Labster.
+- [Capabilities](https://www.labster.com/capabilities): Platform capability overview.
+- [3D chemistry models](https://www.labster.com/3d): Interactive molecular and bonding models.
+
+## Integration
+
+- [LMS integration for LMS admins](https://help.labster.com/en/collections/3094279-lms-integration-for-lms-admin): LTI 1.3 tool configuration guides.
+- [Canvas LTI 1.3 setup](https://help.labster.com/en/articles/5822434-admin-how-to-configure-the-labster-lti-1-3-tool-in-canvas)
+- [Blackboard LTI 1.3 setup](https://help.labster.com/en/articles/5826249-admin-how-to-configure-the-labster-lti-1-3-tool-in-blackboard)
+- [Moodle LTI 1.3 setup](https://help.labster.com/en/articles/5822353-admin-how-to-configure-the-labster-lti-1-3-tool-in-moodle)
+- [D2L Brightspace LTI 1.3 setup](https://help.labster.com/en/articles/6166964-admin-how-to-configure-the-lti-1-3-tool-for-d2l-brightspace)
+- [Sakai LTI 1.3 setup](https://help.labster.com/en/articles/6221292-admin-how-to-configure-the-lti-1-3-tool-for-sakai)
+- [Schoology LTI 1.3 setup](https://help.labster.com/en/articles/6221091-admin-how-to-configure-the-lti-1-3-tool-for-schoology)
+- [Clever SSO](https://help.labster.com/en/articles/11971470-accessing-labster-through-labster-s-clever-integration)
+- [LMS troubleshooting](https://help.labster.com/en/collections/1584205-lms-troubleshooting)
+
+## Support and documentation
+
+- [Help Center](https://help.labster.com/): Product documentation and admin guides.
+- [Customer support](https://www.labster.com/customer-support)
+- [Guides and resources](https://www.labster.com/guides)
+- [Accessibility](https://www.labster.com/accessibility)
+
+## Security and compliance
+
+- [Security at Labster](https://www.labster.com/security): SOC 2 Type 2, TX-RAMP Level 2, GDPR; responsible disclosure to security@labster.com (no bug bounty).
+- [Trust Center](https://trustcenter.labster.com/?product=labster): HECVAT Full, VPAT, pen-test reports, DPAs, subprocessor list.
+
+## Commercial
+
+- [Compare plans](https://www.labster.com/compare-plans)
+- [Flexible purchasing options](https://www.labster.com/flexible-purchasing-options)
+- [Request a live demo](https://www.labster.com/live-demo)
+- [Terms of service](https://www.labster.com/terms-of-service-and-use)
+- [Privacy policy](https://www.labster.com/privacy-policy)
+
+## Code
+
+- [GitHub organisation (Livit)](https://github.com/Livit): Labster's GitHub org; mostly infrastructure forks plus internal tooling.
+- [Labster.OAuth2Client](https://github.com/Livit/Labster.OAuth2Client): Open-source Django OAuth2 client for internal service-to-service auth (client_credentials and RFC 7523 JWT Bearer). Not an SDK for a Labster API.
+
+## Editorial
+
+- [Blog](https://www.labster.com/blog)
+- [Case studies](https://www.labster.com/case-studies)
+- [Webinars](https://www.labster.com/webinars)
+- [Research](https://www.labster.com/research)
+
+## API Evangelist artifacts
+
+- [APIs.json](https://raw.githubusercontent.com/api-evangelist/labster/refs/heads/main/apis.yml)
+- authentication/labster-authentication.yml: how LTI 1.3, Clever SSO and internal OAuth2 authenticate.
+- conformance/labster-conformance.yml: LTI 1.3, OIDC, OAuth2, SOC 2, TX-RAMP, HECVAT, VPAT.
+- integrations/_index.yml: the eight documented LMS/SSO integrations.
+- security/: domain security probe, vulnerability disclosure, trust center.
+- lifecycle/labster-lifecycle.yml: recorded absence of versioning, deprecation, SLA and status page.
+- well-known/labster-well-known.yml: recorded absence of any /.well-known/ discovery documents.

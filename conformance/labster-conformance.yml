@@ -1,0 +1,73 @@
+generated: '2026-07-19'
+method: searched
+source: https://help.labster.com/en/collections/3094279-lms-integration-for-lms-admin
+note: >-
+  Labster has no public REST API, so there is no OpenAPI to derive conformance
+  from. Its machine-to-machine surface is the 1EdTech LTI 1.3 tool it registers
+  inside customer LMS platforms, plus Clever SSO. Standards below are asserted
+  from the provider's own admin documentation and public security page.
+standards:
+- id: lti-1.3
+  name: 1EdTech Learning Tools Interoperability 1.3
+  conforms: true
+  evidence: >-
+    Labster publishes admin configuration guides for "the Labster LTI 1.3 tool"
+    in Canvas, Blackboard, Moodle, D2L/Brightspace, Sakai and Schoology.
+- id: oidc
+  name: OpenID Connect
+  conforms: true
+  evidence: >-
+    LTI 1.3 launches are built on the OIDC third-party-initiated login flow;
+    Labster registers an LTI 1.3 developer key / client ID per LMS tenant.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: true
+  evidence: >-
+    LTI 1.3 service calls use OAuth 2.0 client credentials; Labster additionally
+    open-sources an OAuth2 client-credentials library (Livit/Labster.OAuth2Client).
+- id: rfc7523-jwt-bearer
+  name: RFC 7523 JWT Profile for OAuth 2.0
+  conforms: true
+  evidence: >-
+    Labster.OAuth2Client documents a JWT Bearer grant type used for Salesforce
+    service-to-service communication.
+- id: soc2-type2
+  name: SOC 2 Type 2
+  conforms: true
+  evidence: certified May 2025, per https://www.labster.com/security
+- id: tx-ramp
+  name: TX-RAMP Level 2
+  conforms: true
+  evidence: certified, per https://www.labster.com/security
+- id: gdpr
+  name: GDPR
+  conforms: true
+  evidence: alignment stated on https://www.labster.com/security
+- id: hecvat-full
+  name: HECVAT Full
+  conforms: true
+  evidence: HECVAT Full risk assessment available via the Labster Trust Center
+- id: vpat-wcag
+  name: VPAT / WCAG accessibility conformance
+  conforms: true
+  evidence: >-
+    VPAT published via the Trust Center; https://www.labster.com/accessibility
+    documents accessibility features.
+- id: iso-27001
+  name: ISO/IEC 27001
+  conforms: false
+  status: in-progress
+  evidence: implementation stated as underway on https://www.labster.com/security
+- id: nist-800-171
+  name: NIST SP 800-171
+  conforms: false
+  status: in-progress
+  evidence: alignment effort stated on https://www.labster.com/security
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence: no public API or machine-readable API description published
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: no public API surface to evaluate

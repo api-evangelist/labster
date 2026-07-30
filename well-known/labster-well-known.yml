@@ -1,0 +1,47 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of the Labster public hosts
+note: >-
+  No /.well-known/ discovery documents are published on any Labster host. This is
+  a recorded negative result, not a gap in the harvest. Labster ships no public
+  API and no public OAuth/OIDC authorization server, so there is no discovery
+  surface to index. Recorded so a later re-run can detect a change.
+hosts:
+- host: https://www.labster.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://my.labster.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+subdomains_probed:
+- host: https://developer.labster.com
+  status: 000
+  note: does not resolve
+- host: https://api.labster.com
+  status: 000
+  note: does not resolve
+- host: https://docs.labster.com
+  status: 404
+- host: https://status.labster.com
+  status: 000
+  note: does not resolve
+- host: https://trustcenter.labster.com
+  status: 200

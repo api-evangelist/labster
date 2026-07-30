@@ -1,0 +1,76 @@
+generated: '2026-07-19'
+method: searched
+source: https://help.labster.com/en/collections/3094279-lms-integration-for-lms-admin
+note: >-
+  Listing-only. Every Labster integration is an LTI 1.3 tool registration inside a
+  customer's LMS, or an SSO handoff — there is no Labster API to author Arazzo
+  workflows against, and neither side publishes the endpoint configuration
+  publicly (it is issued per customer by Labster Customer Success). All entries
+  therefore carry `arazzo: null` with `status: no-public-api` rather than a
+  fabricated workflow.
+integrations:
+- slug: canvas
+  label: Canvas (LTI 1.3)
+  partner: Instructure Canvas
+  category: lms
+  use_case: Register Labster as an LTI 1.3 tool in Canvas and launch simulations from a course.
+  docs: https://help.labster.com/en/articles/5822434-admin-how-to-configure-the-labster-lti-1-3-tool-in-canvas
+  arazzo: null
+  status: no-public-api
+- slug: canvas-api
+  label: Canvas (via Canvas API)
+  partner: Instructure Canvas
+  category: lms
+  use_case: Configure the Labster tool through the Canvas API rather than the Canvas admin UI.
+  docs: https://help.labster.com/en/articles/8232506-admin-how-to-configure-the-labster-tool-via-canvas-api
+  arazzo: null
+  status: partner-api-only
+  note: Uses Instructure's API, not a Labster API.
+- slug: blackboard
+  label: Blackboard (LTI 1.3)
+  partner: Anthology Blackboard
+  category: lms
+  use_case: Register Labster as an LTI 1.3 tool in Blackboard and add simulations to a course.
+  docs: https://help.labster.com/en/articles/5826249-admin-how-to-configure-the-labster-lti-1-3-tool-in-blackboard
+  arazzo: null
+  status: no-public-api
+- slug: moodle
+  label: Moodle (LTI 1.3)
+  partner: Moodle
+  category: lms
+  use_case: Register Labster as an LTI 1.3 tool in Moodle.
+  docs: https://help.labster.com/en/articles/5822353-admin-how-to-configure-the-labster-lti-1-3-tool-in-moodle
+  arazzo: null
+  status: no-public-api
+- slug: d2l-brightspace
+  label: D2L Brightspace (LTI 1.3)
+  partner: D2L Brightspace
+  category: lms
+  use_case: Register Labster as an LTI 1.3 tool in D2L Brightspace.
+  docs: https://help.labster.com/en/articles/6166964-admin-how-to-configure-the-lti-1-3-tool-for-d2l-brightspace
+  arazzo: null
+  status: no-public-api
+- slug: sakai
+  label: Sakai (LTI 1.3)
+  partner: Sakai
+  category: lms
+  use_case: Register Labster as an LTI 1.3 tool in Sakai.
+  docs: https://help.labster.com/en/articles/6221292-admin-how-to-configure-the-lti-1-3-tool-for-sakai
+  arazzo: null
+  status: no-public-api
+- slug: schoology
+  label: Schoology (LTI 1.3)
+  partner: PowerSchool Schoology
+  category: lms
+  use_case: Register Labster as an LTI 1.3 tool in Schoology.
+  docs: https://help.labster.com/en/articles/6221091-admin-how-to-configure-the-lti-1-3-tool-for-schoology
+  arazzo: null
+  status: no-public-api
+- slug: clever
+  label: Clever SSO
+  partner: Clever
+  category: sso
+  use_case: District users launch Labster from the Clever Portal; identity matched on email.
+  docs: https://help.labster.com/en/articles/11971470-accessing-labster-through-labster-s-clever-integration
+  arazzo: null
+  status: no-public-api
