@@ -10,6 +10,17 @@ description: Labster is a virtual laboratory simulation platform for universitie
   - its machine-to-machine surface is the per-tenant LTI 1.3 tool registration issued by Labster Customer
   Success. The company is SOC 2 Type 2 and TX-RAMP Level 2 certified, publishes HECVAT Full and a VPAT through
   its Trust Center, and operates a responsible disclosure program at security@labster.com.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
